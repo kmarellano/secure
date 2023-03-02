@@ -13,9 +13,9 @@ const app = express(); // Web framework to handle routing requests
 const routes = require("./app/routes");
 const { port, db, cookieSecret } = require("./config/config"); // Application config properties
 
-// const csrf = require('csurf');
-// const helmet = require("helmet");
-//const nosniff = require('dont-sniff-mimetype');
+const csrf = require("csurf");
+const helmet = require("helmet");
+const nosniff = require("dont-sniff-mimetype");
 
 const fs = require("fs");
 const https = require("https");
