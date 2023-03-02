@@ -62,7 +62,7 @@ MongoClient.connect(db, (err, db) => {
 			cookie: {
 				httpOnly: true,
 				// Remember to start an HTTPS server to get this working
-				// secure: true
+				secure: true
 			},
 			maxAge: 24 * 60 * 60 * 1000,
 			secret: cookieSecret,
