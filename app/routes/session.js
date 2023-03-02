@@ -117,9 +117,8 @@ function SessionHandler(db) {
 			// i.e:
 			req.session.regenerate(() => {
 				req.session.userId = user._id;
+				return res.redirect(user.isAdmin ? "/benefits" : "/dashboard");
 			});
-
-			return res.redirect(user.isAdmin ? "/benefits" : "/dashboard");
 		});
 	};
 
